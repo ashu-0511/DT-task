@@ -1,0 +1,225 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Style.css">
+    <title>Deep thought</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed&family=Poppins&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="flex justify-around">
+        <div class=" logo">
+            <img src="./Assets/logo.svg" alt="logo">
+        </div>
+        <div class=" empty"></div>
+
+        <div class="list">
+            <ul class=" flex justify-around">
+                <a href="#">
+                    <li class="ibg">
+                        <i class="fa-solid fa-house" style="color: #ffffff;"></i>
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="ibg">
+                        <i class="fa-solid fa-screwdriver-wrench" style="color: #ffffff;"></i>
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="ibg">
+                        <i class="fa-solid fa-bell" style="color: #ffffff;"></i>
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="">
+                        <img src="./Assets//profile.png" alt="profile">
+                    </li>
+                </a>
+
+                <div class="menu-icon" onclick="toggleMenu()">⋮</div>
+
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main">
+
+        <div class="flex justify-around  heading1">
+            <div class="heading">
+                <h2>
+                    Technical Project Management
+                </h2>
+            </div>
+            <div>
+                <button class=" btn">
+                    Submit task
+                </button>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <div class="contents">
+                <h3>Explore the world of management</h3>
+                <p>As a project manager, you play an important reole in leading a project through initiation, planning,
+                    execution, monitoring, controlling and completion. How? Do you want to manage each and every step of
+                    your life?</p>
+            </div>
+        </div>
+
+        <div class="card-container grid">
+            <div class="card">
+                <div class="card-header">
+                    <p>Technical Project Management</p>
+                    <span class="info-icon">i</span>
+                </div>
+                <p class="description"><b>Description</b>: Story of Alignment Scope of Agility Specific Accountable
+                    Staggering
+                    Approach</p>
+                <div class="content">
+                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/FqNAHjel8HU" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <p>Threadbuild</p>
+                    <span class="info-icon">i</span>
+                </div>
+                <p class="description">
+                    <b>Description:</b> Watch the video and threadbuild, and jot out key threads while watching the
+                    video
+                </p>
+                <hr>
+                <div class="thread-header" onclick="toggleThread()">
+                    <span class="arrow" id="arrow"></span> Thread A
+                </div>
+                <div class="thread-content" id="threadContent" style="display: none;">
+                    <div class="threadbuild-container">
+                        <div class="flex">
+                            <div class="sub-thread">
+                                <p>Sub thread 1</p>
+                                <textarea placeholder="Enter Text here"></textarea>
+                            </div>
+                            <div class="sub-interpretation">
+                                <p>Sub Interpretation 1</p>
+                                <textarea placeholder="Enter Text here"></textarea>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <i class="fa-solid fa-lightbulb" style="color: #000000;"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-circle-question"></i>
+                            <i class="fa-solid fa-seedling"></i>
+                            <select>
+                                <option>Select Categ</option>
+                            </select>
+                            <select>
+                                <option>Select Process</option>
+                            </select>
+                        </div>
+                        <button class="add-subthread">+ Sub-thread</button>
+                        <div class="summary">
+                            <p>Summary for Thread A</p>
+                            <textarea placeholder="Enter Text Here"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <p>Structure your Pointers</p>
+                    <span class="info-icon">i</span>
+                </div>
+                <p class="description">
+                    <b>Description:</b> Write a 300 - 400 word article from your thread. Publish your understanding and
+                    showcase your understanding to the entire world.
+                </p>
+                <div class="p-20">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" class="input-field" placeholder="Enter Title">
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Content</label>
+                        <textarea id="content" class="textarea-field"
+                            placeholder="Write your content here..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <p>4SA Method</p>
+                    <span class="info-icon">i</span>
+                </div>
+                <p class="description">
+                    <b>Description:</b> To Explore more read more
+                </p>
+                <div class="p-20">
+
+                    <div class="collapsible">
+                        <div class="collapsible-header" onclick="toggleSection('introduction-content')">
+                            <span class="arrow"></span> Introduction
+                        </div>
+                        <div id="introduction-content" class="collapsible-content">
+                            <p>The 4SA Method, How to bring an idea into progress?</p>
+                            <span class="see-more">See More</span>
+                        </div>
+                    </div>
+
+
+                    <div class="collapsible">
+                        <div class="collapsible-header" onclick="toggleSection('threadA-content')">
+                            <span class="arrow"></span> Thread A
+                        </div>
+                        <div id="threadA-content" class="collapsible-content">
+                            <p>
+                                How are you going to develop your strategy? Which method are you going
+                                to use to develop a strategy? What if the project is lengthy?
+                            </p>
+                            <span class="see-more">See More</span>
+                        </div>
+                    </div>
+
+
+                    <div class="example">
+                        <p><b>Example 1</b></p>
+                        <p>You have a concept, How will you put it into progress?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="storyboard-container">
+            <div class="storyboard" id="storyboard">
+                <div class="storyboard-header" id="header">
+                    <span>Journey Board</span>
+                    <button class="close-btn"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <ul class="storyboard-content">
+                    <li>Explore the world of management</li>
+                    <ul>
+                        <li>Technical Project Management</li>
+                        <li>Threadbuild</li>
+                        <li>Structure your pointers</li>
+                        <li>4SA Method</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <script src="./Main.js"></script>
+</body>
+
+</html>
